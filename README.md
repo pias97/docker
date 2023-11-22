@@ -1,4 +1,3 @@
-# docker-practice
+# Beginers guide to containerization using Docker
 
-Here it is a small python project used to containerize by docker. This is not multistaged or multiplatform compatible either!!!
-
+A basic python project has been used here to containerize.
