@@ -130,6 +130,14 @@ CONTAINER ID   IMAGE                           COMMAND                  CREATED 
 0729d9443797   0eb9acd4b1fc                    "python3 manage.py r…"   7 hours ago   Exited (0) 7 hours ago                  hungry_napier
 
 ```
+We can get into the container through a shell by using this command. We can run using either container id or image name.
+
+```
+docker exec -it <container_id / Image_name> bash
+docker exec -it 49a40b5095ad bash
+```
+
+
 SO here it is, our container is up and running. 
 
 Now let's step one step further, notice the size of the our image showing on local machine is 508MB and pushed file size is 195MB. So the image size compressed on the while uploading. But even 508MB file is comparetively large, lets compress it by using the concept of multistage.
