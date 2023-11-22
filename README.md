@@ -108,5 +108,30 @@ docker push pias97/first_python_image:v1
 ![Alt text](image-2.png)
 
 Here it is pushed on the dockerhub repository.
+ 
 
-Notice on thing, the size of the our image is comparatively large 
+Now let's run our first docker image on our machine. To do this, use the follwing command.
+
+```
+docker run -it pias97/first_python_image:v1
+```
+
+Let's check our running container by using this command
+
+```
+docker ps -a
+```
+
+Dummy Output
+```
+CONTAINER ID   IMAGE                           COMMAND                  CREATED       STATUS                        PORTS     NAMES
+9c245398803d   moby/buildkit:buildx-stable-1   "buildkitd"              3 hours ago   Exited (137) 46 minutes ago             buildx_buildkit_elegant_hugle0
+49a40b5095ad   pythonimage:v1                  "python3 manage.py r…"   7 hours ago   Exited (0) 5 hours ago                  strange_hawking
+0729d9443797   0eb9acd4b1fc                    "python3 manage.py r…"   7 hours ago   Exited (0) 7 hours ago                  hungry_napier
+
+```
+SO here it is, our container is up and running. 
+
+Now let's step one step further, notice the size of the our image showing on local machine is 508MB and pushed file size is 195MB. So the image size compressed on the while uploading. But even 508MB file is comparetively large, lets compress it by using the concept of multistage.
+
+#### FOR NOW, docker image is compressed even further using multistaging and multiplatform compatibility is also there for amd64/arm64 architecture. Further details will be added, to learn these steps. ###
