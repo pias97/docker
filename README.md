@@ -134,6 +134,8 @@ We can get into the container through a shell by using this command. We can run 
 
 ```
 docker exec -it <container_id / Image_name> bash
+
+for example,
 docker exec -it 49a40b5095ad bash
 ```
 
